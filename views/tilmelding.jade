@@ -1,0 +1,119 @@
+﻿extends layout
+
+block content
+  script( src='../vendor/tilmeldingsscript.js', type='text/javascript')
+  #info
+    #textfield
+      form#FOADMEMBERSIGNUPFORM(action='https://portal.foreningsadministrator.dk/tilmeld.php', method='POST', enctype='multipart/form-data', autocomplete='OFF')
+        table
+          tr
+            th(colspan='2') Tilmeldingsformular
+          tr
+            td  Fornavn 
+            td
+              input(type='TEXT', size='25', maxlength='100', name='MemberFirstname', value='')
+              br
+          tr
+            td  Mellemnavn 
+            td
+              input(type='TEXT', size='25', maxlength='100', name='MemberMiddlename', value='')
+              br
+            td
+          tr
+            td Efternavn 
+            td
+              input(type='TEXT', size='25', maxlength='100', name='MemberLastname', value='')
+              br
+          tr
+            td  Adresse 
+            td
+              input(type='TEXT', size='25', maxlength='100', name='MemberAdress', value='')
+              br
+            td
+          tr
+            td  Post nr. 
+            td
+              input#FOAD_ZIP(type='TEXT', size='4', maxlength='4', name='MemberZip', value='', onkeyup='foadInputValidate();')
+              span#FOAD_ZIP_HIGHLIGHT(style='font-size: 18px; color: #FF0000;')
+              br
+          tr
+            td  By 
+            td
+              input(type='TEXT', size='25', maxlength='100', name='MemberCity', value='')
+              br
+            td
+          tr
+            td  E-mail 
+            td
+              input#FOAD_EMAIL(type='TEXT', size='25', maxlength='100', name='MemberEmail', value='', onkeyup='foadInputValidate();')
+              span#FOAD_EMAIL_HIGHLIGHT(style='font-size: 18px; color: #FF0000;')
+              br
+          tr
+            td Telefon 
+            td
+              input#FOAD_PHONE(type='TEXT', size='8', maxlength='8', name='MemberPhone', value='', onkeyup='foadInputValidate();')
+              span#FOAD_PHONE_HIGHLIGHT(style='font-size: 18px; color: #FF0000;')
+              br
+          tr
+            td  Mobil 
+            td
+              input#FOAD_MOBILE(type='TEXT', size='8', maxlength='8', name='MemberMobile', value='', onkeyup='foadInputValidate();')
+              span#FOAD_MOBILE_HIGHLIGHT(style='font-size: 18px; color: #FF0000;')
+              br
+          tr
+            td  Fødselsdag 
+            td
+              input#FOAD_BIRTH(type='TEXT', size='10', maxlength='10', name='MemberBirth', value='', onkeyup='foadInputValidate();' placeholder='(dd.mm.åååå)') 
+              span#FOAD_BIRTH_HIGHLIGHT(style='font-size: 18px; color: #FF0000;')
+              br
+          tr
+            td  Køn 
+            td
+              select(name='MemberSex')
+                option(value='1') Mand
+                option(value='2') Kvinde
+              br
+          tr
+            td  Kommentar 
+            td
+              input(type='TEXT', size='25', maxlength='100', name='MemberComment', value='')
+              br
+          tr
+            td  Forældre/værge navn 
+            td
+              input(type='TEXT', size='25', maxlength='100', name='MemberExtra1', value='')
+              br
+          tr
+            td Deltager mail 
+            td
+              input#FOAD_EXTRA2(type='TEXT', size='25', maxlength='100', name='MemberExtra2', value='', onkeyup='foadInputValidate();')
+              span#FOAD_EXTRA2_HIGHLIGHT(style='font-size: 18px; color: #FF0000;')
+              br
+          tr
+            td  Forældre/værge mobil 
+            td
+              input#FOAD_EXTRA3(type='TEXT', size='8', maxlength='8', name='MemberExtra3', value='', onkeyup='foadInputValidate();')
+              span#FOAD_EXTRA3_HIGHLIGHT(style='font-size: 18px; color: #FF0000;')
+              br
+          tr
+            td Ønsket hold: 
+            td
+              select(name='MemberExtra4')
+                option Minecraft 1
+                option Nørdenirvana Classic
+                option Videnskabsnørd - venteliste
+              br
+          tr
+            td(colspan='2')
+              input(type='BUTTON', value='Tilmeld', onclick='foadMemberSignupSubmit();' class='tilmeld')
+        input(type='HIDDEN', name='MemberEmailNotice', value='1')
+        input(type='HIDDEN', name='MemberSMSNotice', value='1')
+        input(type='HIDDEN', name='ACCEPTURL', value='http://noerdenirvana.dk/?page_id=203')
+        input(type='HIDDEN', name='DECLINEURL', value='http://noerdenirvana.dk/?page_id=206')
+        input(type='HIDDEN', name='FOADCOPY', value='he@aaenco.dk')
+        input(type='HIDDEN', name='FOADMETY', value='62')
+        input(type='HIDDEN', name='FOADACC', value='655')
+        input(type='HIDDEN', name='FOADCOS', value='690')
+        input(type='HIDDEN', name='FOADSEC', value='38ae0c38d5f0df2f0ee64343a2ed437c')
+        input(type='HIDDEN', name='FOADNOTSEC', value='065545ytjhkghfdg324ddc6901:1:1:1:1:1:1:1:1:0:1:1:1:1:1:1:1:1:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:he@aaenco.dk')
+        input(type='HIDDEN', name='FOADELM', value='1:1:1:1:1:1:1:1:1:0:1:1:1:1:1:1:1:1:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:')
