@@ -1,0 +1,238 @@
+html, body {
+    margin:0;
+    padding:0;
+}
+
+body {
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  background:url(../images/tree_background.png) no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  text-align:center;
+  /*background-position: 50% 0; */
+  /*background-size: auto 100vh; */
+}
+
+@font-face {
+    font-family: vonique;
+    src: url(Vonique92.otf);
+}
+
+h1 {
+    color:antiquewhite;
+    font-family: vonique;
+    font-size: 5em;
+    margin: 20px;
+    margin-top: 0px;
+    padding-top:20px;
+}
+a {
+  color: #00b7ff;
+}
+
+td {
+  font-size: 1.4em;
+}
+input {
+    background-color: rgba(255,255,255,0.3);
+    border: rgba(22,22,22,0.0) solid 2px;
+    padding: 4px;
+    float:right;
+}
+input:hover {
+    background-color: rgba(255,255,255,0.5);
+    border: rgba(22,22,22,0.2) solid 2px;
+}
+input:focus {
+    background-color: rgba(255,255,255,0.5);
+    border: rgba(22,22,22,0.2) solid 2px;
+}
+select {
+    background-color: rgba(255,255,255,0.3);
+    border: rgba(22,22,22,0.0) solid 2px;
+    padding: 4px;
+    float:right;
+}
+
+/* SIDEBAR */
+.sidemenu {
+    position:relative;
+    float:left;
+    width:20vh;
+    margin-right:10px;
+    /*padding-top:10%;*/
+    z-index:1;
+    /*background-color:rgba(22,22,29, 0.3);*/
+}
+
+.menulogo {
+    width: 50%;
+    height: 50%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#island {
+    height:200px;
+    width:200px;
+    background-color:rgba(22,22,22,0.3);
+    margin: auto auto auto auto;
+}
+
+#info {
+    position:absolute;
+    bottom:0;
+    width:100%;
+    display:none;
+    margin-left:auto;
+    margin-right:auto;
+}
+
+#textfield {
+    background-color:rgba(22,22,22,0.3);
+    width: 90%;
+    height: 100%;
+    max-height: 80vh;
+    overflow-y: auto;
+    text-align:left;
+    color:antiquewhite;
+    margin: 0;
+    padding-bottom:3em;
+    padding-left:10%;
+    padding-top:1%;
+}
+/* BUTTONS */
+.btn {
+  display: inline-block;
+  background: #e2e2e2;
+  border: 0;
+  line-height: 2.5em;
+  padding: 0 0 0 1em;
+  margin-bottom: 1em;
+  outline: none;
+  text-decoration: none;
+  color: #666;
+}
+.btn .arrow {
+  display: inline-block;
+  line-height: 2.5em;
+  text-align: center;
+  background: #333;
+  color: white;
+  font-size: 1em;
+  width: 2.5em;
+  transition: margin 200ms;
+  margin-left: .75em;
+}
+.btn:hover {
+  background: white;
+}
+.btn:hover .arrow {
+  margin-left: 1.25em;
+  background-color: #262626;
+}
+.btn:active {
+  background: #ccc;
+}
+.btn:active .arrow {
+  margin-left: 1.5em;
+}
+
+.btn-aktiviteter .arrow {
+  background-color: #AA4C39;
+}
+.btn-aktiviteter:hover .arrow {
+  background-color: #802815;
+}
+
+.btn-tilmelding .arrow {
+  background-color: #AA6C39;
+}
+.btn-tilmelding:hover .arrow {
+  background-color: #804515;
+}
+
+.btn-kontakt .arrow {
+  background-color: #226666;
+}
+.btn-kontakt:hover .arrow {
+  background-color: #003333;
+}
+
+.btn-priser .arrow {
+  background-color: #297B48;
+}
+.btn-priser:hover .arrow {
+  background-color: #003E17;
+}
+
+.btn-about .arrow {
+  background-color: darkblue;
+}
+.btn-about:hover .arrow {
+  background-color: darkslateblue;
+}
+
+button::-moz-focus-inner {
+  border: none;
+}
+
+.left {
+  text-align: left;
+  position: absolute;
+  left:0;
+  top:34vh; 
+  z-index:100;
+}
+
+::-webkit-input-placeholder {
+   color: rgb(22,22,22);
+}
+
+:-moz-placeholder { /* Firefox 18- */
+   color: rgb(22,22,22);  
+}
+
+::-moz-placeholder {  /* Firefox 19+ */
+   color: rgb(22,22,22); 
+}
+
+:-ms-input-placeholder {  
+   color: rgb(22,22,22);
+}
+
+.tilmeld {
+    height:50px;
+    width:100%;
+    font-size: 26px;
+}
+
+th {
+    font-size:3em;
+    text-decoration: underline;
+    padding-bottom:15px;
+}
+table {
+    margin-left:33%;
+}
+::-webkit-scrollbar {
+      width: 15px;
+}
+::-webkit-scrollbar-track {
+      background-color: rgba(22,22,22,0.0);
+} /* the new scrollbar will have a flat appearance with the set background color */
+ 
+::-webkit-scrollbar-thumb {
+      background-color: rgba(0, 0, 0, 0.2); 
+} /* this will style the thumb, ignoring the track */
+ 
+::-webkit-scrollbar-button {
+      background-color: rgba(22,22,22,0.0);
+      height:0;
+} /* optionally, you can style the top and the bottom buttons (left and right for horizontal bars) */
+ 
+::-webkit-scrollbar-corner {
+      background-color: black;
+}
