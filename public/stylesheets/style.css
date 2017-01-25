@@ -225,7 +225,7 @@ table {
 
 @media screen and (max-width: 320px){
  h1 {
-    font-size:10em;
+    font-size:100px;
   }
 }
 
