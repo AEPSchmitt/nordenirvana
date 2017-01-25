@@ -189,7 +189,7 @@ button::-moz-focus-inner {
   position: absolute;
   left:0;
   top:34vh; 
-  z-index:100;
+  z-index:10;
 }
 
 ::-webkit-input-placeholder {
@@ -235,6 +235,9 @@ table {
     z-index: 200;
     font-size: 36px;
     padding-right: 10%
+  }
+  #info{
+    z-index: 5;
   }
 }
 
