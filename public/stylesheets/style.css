@@ -231,6 +231,11 @@ table {
   .btn{
     font-size: 32px;
   }
+  #textfield{
+    z-index: 200;
+    font-size: 36px;
+    padding-right: 10%
+  }
 }
 
 ::-webkit-scrollbar {
