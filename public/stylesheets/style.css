@@ -225,8 +225,11 @@ table {
 
 @media only screen and (max-device-width: 480px) {
 /* define mobile specific styles come here */
- h1 {
+  h1 {
     font-size:100px;
+  }
+  btn{
+    font-size: 32px;
   }
 }
 
