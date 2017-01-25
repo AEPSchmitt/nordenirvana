@@ -5,7 +5,8 @@ html, body {
 
 body {
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
-  background:url(../images/tree_background.png) no-repeat center center fixed; 
+  background:url(../images/tree_background.png);
+  background-position: center; 
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -217,6 +218,14 @@ th {
 table {
     margin-left:33%;
 }
+
+@media screen and (max-width: 320px){
+       body { 
+        width: 320px!important;
+        background-position: center;
+       }
+}
+
 ::-webkit-scrollbar {
       width: 15px;
 }
