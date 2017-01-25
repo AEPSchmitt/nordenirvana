@@ -224,9 +224,11 @@ table {
 }
 
 @media screen and (max-width: 320px){
-       body { 
-        background-height:100%;
-       }
+  .btn .arrow {
+    line-height: 3.5em;
+    font-size: 1em;
+    width: 3.5em;
+  }
 }
 
 ::-webkit-scrollbar {
