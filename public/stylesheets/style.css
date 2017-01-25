@@ -224,8 +224,7 @@ table {
 
 @media screen and (max-width: 320px){
        body { 
-        width: 320px!important;
-        background-position: center;
+        background-height:100%;
        }
 }
 
