@@ -133,6 +133,10 @@ select {
 .btn:hover {
   background: white;
 }
+.pagetitle{
+  color: inherit;
+  text-decoration:none;
+}
 .btn:hover .arrow {
   margin-left: 1.25em;
   background-color: #262626;
