@@ -31,6 +31,9 @@ html
     link(rel='icon', type='image/png', href='/images/icons/favicon-16x16.png', sizes='16x16')
     link(rel='icon', type='image/png', href='/images/icons/favicon-32x32.png', sizes='32x32')
   body
+  h1
+    a.pagetitle(href='/')
+      | Nørdenirvana 
   .sidemenu
     .left
       //-img(src="../images/NirvanaCube.png").menulogo
@@ -57,7 +60,4 @@ html
       a.btn.btn-about(href='/about')
         | Om os
         span.arrow ❯
-  h1
-    a.pagetitle(href='/')
-      | Nørdenirvana 
   block content
