@@ -9,6 +9,7 @@ html
     script(type='text/javascript' src='../vendor/jquery/jquery-ui.min.js')
     script(type='text/javascript' src='../vendor/jquery/external/jquery/jquery.js')
     script(type='text/javascript' src='../javascripts/init.js')
+    script( src='../vendor/tilmeldingsscript.js', type='text/javascript')
     link(rel='icon', sizes='16x16 32x32 48x48 64x64', href='/images/icons/favicon.ico')
     link(rel='shortcut icon', href='/images/icons/favicon.ico')
     link(rel='apple-touch-icon', sizes='57x57', href='/images/icons/apple-touch-icon-57x57.png')
@@ -33,32 +34,224 @@ html
     link(rel='icon', type='image/png', href='/images/icons/favicon-32x32.png', sizes='32x32')
   body
   h1
-    a.pagetitle(href='/')
+    a.pagetitle(onclick='openMenu("none")')
       | Nørdenirvana 
   .sidemenu
     .left
       //-img(src="../images/NirvanaCube.png").menulogo
-      a.btn(href='/')
+      a.btn(onclick='openMenu("none")')
         | Startside
         span.arrow ❯
       br
-      a.btn.btn-aktiviteter(href='/aktiviteter')
+      a.btn.btn-aktiviteter(onclick='openMenu("#aktiviteter")')
         | Aktiviteter 
         span.arrow ❯
       br
-      a.btn.btn-tilmelding(href='/tilmelding')
+      a.btn.btn-tilmelding(onclick='openMenu("#tilmelding")')
         | Tilmelding
         span.arrow ❯
       br
-      a.btn.btn-kontakt(href='/kontakt')
+      a.btn.btn-kontakt(onclick='openMenu("#kontakt")')
         | Kontakt
         span.arrow ❯
       br
-      a.btn.btn-priser(href='/priser')
+      a.btn.btn-priser(onclick='openMenu("#priser")')
         | Priser
         span.arrow ❯
       br
-      a.btn.btn-about(href='/about')
+      a.btn.btn-about(onclick='openMenu("#about")')
         | Om os
         span.arrow ❯
-  block content
+  .info
+    #aktiviteter.textfield(style="display:none")
+      h2 Overordnet
+      a(href="/priser") Priser kan findes på dette link
+      p På aftenhold (17-20) er der mulighed for mad, der købes med madklip (10 madklip koster 100kr.).
+      p Lokaliteter vil blive tilføjet når de er fastsat.
+      p Der vil på alle hold være mulighed for at være med 2 gange gratis, for at se hvad vi egentlig går og laver.
+      h2 Nørdenirvana Classic (Storenørd)
+      p 
+        u Anbefalet alder: 12+
+      p
+        u Tidspunkt: Tirsdag, kl. 17-20.
+      p
+        u Sted: 6. klasses klubben på Baunebjergskolen i Humlebæk.
+      p Nørdenirvanas orginale hold er en bred vifte af nørderi.
+      p Der bliver spillet kortspil, både digitale som fx Hearthstone og old school som Pokémon og Magic the Gathering.
+      p Der bliver bygget alverdens sjov på den store Minecraft Nørdenirvana-server, som der også er adgang til hjemmefra.
+      p Der bliver overvundet diverse monstre i vores eventyr i Dungeons & Dragons (også kendt som papirrollespil eller bordrollespil), og der bliver set det nyeste afsnit af Doctor Who, Gravity Falls samt de bedste superheltefilm, og genset Monty Python.
+      p Der er plads til alle nørderier på Nørdenirvana Classic, og vi håber du vil dele din interesse med os.
+      h2 Minecraft
+      p
+        u Anbefalet alder: Alle
+      p
+        u Tidspunkt: Hver lørdag mellem klokken 10 og 13.
+      p
+        u Sted: Humlebæk bibliotek
+      p Er du allerede Minecraftekspert, eller vil du gerne være det? På Nørdenirvanas Minecrafthold arbejder alle sammen om at opbygge den vildeste server, ved at dele smarte byggetricks og idéer med hinanden.
+      p Som del af Nørdenirvanas Minecrafthold, får man også adgang til den fælles minecraftserver, så aktiviteterne fortsætter derhjemme.
+      p Holdet er ikke kun afgrænset til Minecraft, League of Legends eller lignende fællesspil er selvfølgelig okay.
+      h2 KOMMER SNART!
+      h2 Code Geeks
+      p Lær at programmere hjemmesider og spil
+  .info
+    #tilmelding.textfield(style="display:none")
+      form#FOADMEMBERSIGNUPFORM(action='https://portal.foreningsadministrator.dk/tilmeld.php', method='POST', enctype='multipart/form-data', autocomplete='OFF')
+        table
+          tr
+            th(colspan='2') Tilmeldingsformular
+          tr
+            td  Fornavn 
+            td
+              input(type='TEXT', size='25', maxlength='100', name='MemberFirstname', value='')
+              br
+          tr
+            td  Mellemnavn 
+            td
+              input(type='TEXT', size='25', maxlength='100', name='MemberMiddlename', value='')
+              br
+            td
+          tr
+            td Efternavn 
+            td
+              input(type='TEXT', size='25', maxlength='100', name='MemberLastname', value='')
+              br
+          tr
+            td  Adresse 
+            td
+              input(type='TEXT', size='25', maxlength='100', name='MemberAdress', value='')
+              br
+            td
+          tr
+            td  Post nr. 
+            td
+              input#FOAD_ZIP(type='TEXT', size='4', maxlength='4', name='MemberZip', value='', onkeyup='foadInputValidate();')
+              span#FOAD_ZIP_HIGHLIGHT(style='font-size: 18px; color: #FF0000;')
+              br
+          tr
+            td  By 
+            td
+              input(type='TEXT', size='25', maxlength='100', name='MemberCity', value='')
+              br
+            td
+          tr
+            td  E-mail 
+            td
+              input#FOAD_EMAIL(type='TEXT', size='25', maxlength='100', name='MemberEmail', value='', onkeyup='foadInputValidate();')
+              span#FOAD_EMAIL_HIGHLIGHT(style='font-size: 18px; color: #FF0000;')
+              br
+          tr
+            td Telefon 
+            td
+              input#FOAD_PHONE(type='TEXT', size='8', maxlength='8', name='MemberPhone', value='', onkeyup='foadInputValidate();')
+              span#FOAD_PHONE_HIGHLIGHT(style='font-size: 18px; color: #FF0000;')
+              br
+          tr
+            td  Mobil 
+            td
+              input#FOAD_MOBILE(type='TEXT', size='8', maxlength='8', name='MemberMobile', value='', onkeyup='foadInputValidate();')
+              span#FOAD_MOBILE_HIGHLIGHT(style='font-size: 18px; color: #FF0000;')
+              br
+          tr
+            td  Fødselsdag 
+            td
+              input#FOAD_BIRTH(type='TEXT', size='10', maxlength='10', name='MemberBirth', value='', onkeyup='foadInputValidate();' placeholder='(dd.mm.åååå)') 
+              span#FOAD_BIRTH_HIGHLIGHT(style='font-size: 18px; color: #FF0000;')
+              br
+          tr
+            td  Køn 
+            td
+              select(name='MemberSex')
+                option(value='1') Mand
+                option(value='2') Kvinde
+              br
+          tr
+            td  Kommentar 
+            td
+              input(type='TEXT', size='25', maxlength='100', name='MemberComment', value='')
+              br
+          tr
+            td  Forældre/værge navn 
+            td
+              input(type='TEXT', size='25', maxlength='100', name='MemberExtra1', value='')
+              br
+          tr
+            td Deltager mail 
+            td
+              input#FOAD_EXTRA2(type='TEXT', size='25', maxlength='100', name='MemberExtra2', value='', onkeyup='foadInputValidate();')
+              span#FOAD_EXTRA2_HIGHLIGHT(style='font-size: 18px; color: #FF0000;')
+              br
+          tr
+            td  Forældre/værge mobil 
+            td
+              input#FOAD_EXTRA3(type='TEXT', size='8', maxlength='8', name='MemberExtra3', value='', onkeyup='foadInputValidate();')
+              span#FOAD_EXTRA3_HIGHLIGHT(style='font-size: 18px; color: #FF0000;')
+              br
+          tr
+            td Ønsket hold: 
+            td
+              select(name='MemberExtra4')
+                option Minecraft 1
+                option Nørdenirvana Classic
+                option Videnskabsnørd - venteliste
+              br
+          tr
+            td(colspan='2')
+              input(type='BUTTON', value='Tilmeld', onclick='foadMemberSignupSubmit();' class='tilmeld')
+        input(type='HIDDEN', name='MemberEmailNotice', value='1')
+        input(type='HIDDEN', name='MemberSMSNotice', value='1')
+        input(type='HIDDEN', name='ACCEPTURL', value='http://noerdenirvana.dk/?page_id=203')
+        input(type='HIDDEN', name='DECLINEURL', value='http://noerdenirvana.dk/?page_id=206')
+        input(type='HIDDEN', name='FOADCOPY', value='he@aaenco.dk')
+        input(type='HIDDEN', name='FOADMETY', value='62')
+        input(type='HIDDEN', name='FOADACC', value='655')
+        input(type='HIDDEN', name='FOADCOS', value='690')
+        input(type='HIDDEN', name='FOADSEC', value='38ae0c38d5f0df2f0ee64343a2ed437c')
+        input(type='HIDDEN', name='FOADNOTSEC', value='065545ytjhkghfdg324ddc6901:1:1:1:1:1:1:1:1:0:1:1:1:1:1:1:1:1:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:he@aaenco.dk')
+        input(type='HIDDEN', name='FOADELM', value='1:1:1:1:1:1:1:1:1:0:1:1:1:1:1:1:1:1:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:')
+  .info
+    #kontakt.textfield(style="display:none")
+      h2 
+        u Kontakt Bestyrelsen
+      p Formand:
+      p Majbrit Bogø
+      p 
+        a(href='mailto:formand@noerdenirvana.dk') formand@noerdenirvana.dk
+      br
+      p Næstformand:
+      p Rene Nørbjerg
+      p 
+        a(href='mailto:naestformand@noerdenirvana.dk') naestformand@noerdenirvana.dk
+      br      
+      p Kasserer:
+      p Helene Elmgren
+      p 
+        a(href='mailto:kasserer@noerdenirvana.dk') kasserer@noerdenirvana.dk
+      br
+      p Holdleder:
+      p Emil Paltorp
+      p 
+        a(href='mailto:holdleder@noerdenirvana.dk') holdleder@noerdenirvana.dk
+      br
+      p Holdassistent:
+      p Benjamin Bakkelev
+      p 
+        a(href='mailto:holdassistent@noerdenirvana.dk') holdassistent@noerdenirvana.dk
+      br
+      p Suppleant:
+      p Gitte Bakkelev
+      p 
+        a(href='mailto:suppleant@noerdenirvana.dk') suppleant@noerdenirvana.dk
+  .info
+    #priser.textfield(style="display:none")
+      h2 Priser
+      h3 Foreningen Nørdenirvana
+      i Opdaterede priser mv. godkendt på bestyrelsesmøde den 12.04.2015
+      h4 Kontingent og indmeldelsesgebyr:
+      p Medlemskontingent: kr. 900 pr. halvår
+      p Indmeldelsesgebyr kr. 75
+      p Støttemedlemsskab og sponsorater: Har du lyst at støtte foreningen, kan der tegnes et støttemedlemsskab for kr. 500/år, eller kontakt os for andre støttemuligheder. 
+  .info
+    #about.textfield(style="display:none")
+      h2 Foreningen Nørdenirvana
+      p Text text text text
