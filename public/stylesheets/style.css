@@ -254,6 +254,9 @@ table {
   .left2{
     margin-left: -56px;
   }
+  .imageSlideshow{
+      display:none;
+  }
 }
 
 ::-webkit-scrollbar {
