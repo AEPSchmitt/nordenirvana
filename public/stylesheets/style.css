@@ -2,6 +2,7 @@ html, body {
   height: 100%;
   margin:0;
   padding:0;
+  overflow:hidden;
 }
 
 body {
@@ -324,5 +325,30 @@ table {
 
 .imageSlideshow:hover{
     opacity:1.0;
-        background-size: 110%;
+    background-size: 110%;
+}
+
+.closeSlideshow{
+    position: absolute;
+    right: -17px;
+    cursor: pointer;
+    top: -35px;
+    font-family: cursive;
+    font-weight: bold;
+}
+
+.slideshow-btn{
+    transform:scale(0.6);
+}
+
+.slideshow-btn:hover{
+    transform:scale(0.9);
+}
+
+.inactive {
+    opacity:0.0;
+}
+
+.active {
+    opacity:0.8;
 }

@@ -274,8 +274,9 @@ html
       h2 Foreningen Nørdenirvana
       p Text text text text
 .imageSlideshow(data-draggable="true")
+  p.closeSlideshow(onclick="closeSlideshow()") x
 .logoBar(style="height:100px; width:100px")
-  img.logo(src="/images/empty.png")
+  img.logo.slideshow-btn.inactive(src="/images/slideshow.png", onclick="openSlideshow()")
   a(href="https://www.youtube.com/channel/UCmionPbYL2BITCvN73q6FeA")
     img.logo(src="/images/youtube.png")
   a(href="https://www.facebook.com/noerdenirvana")

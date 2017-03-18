@@ -129,3 +129,17 @@ $(document).ready(function() {
          });
 
     });
+
+function closeSlideshow(){
+  slideShowRunning = false;
+  $('.imageSlideshow').hide("medium");
+  $('.slideshow-btn').removeClass("inactive");
+  $('.slideshow-btn').addClass("active");
+}
+
+function openSlideshow(){
+  slideShowRunning = true;
+  $('.imageSlideshow').show("medium");
+  $('.slideshow-btn').removeClass("active");
+  $('.slideshow-btn').addClass("inactive");
+}
