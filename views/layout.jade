@@ -4,9 +4,9 @@ html
     title= title
     link(rel='stylesheet', href='/stylesheets/style.css')
     link(rel='stylesheet', href='/stylesheets/font-awesome-4.7.0/css/font-awesome.min.css')
-    link(rel='stylesheet', href='/vendor/jquery/jquery-ui.min.css')
+    link(rel='stylesheet', href='/vendor/jquery/ui/jquery-ui.min.css')
     script(type='text/javascript' src='../vendor/jquery/jquery-3.1.1.min.js')
-    script(type='text/javascript' src='../vendor/jquery/jquery-ui.min.js')
+    script(type='text/javascript' src='../vendor/jquery/ui/jquery-ui.min.js')
     script(type='text/javascript' src='../vendor/jquery/external/jquery/jquery.js')
     script(type='text/javascript' src='../javascripts/init.js')
     script( src='../vendor/tilmeldingsscript.js', type='text/javascript')
@@ -37,9 +37,9 @@ html
     a.pagetitle(onclick='openMenu("none")')
       | Nørdenirvana 
   .sidemenu
-    .left
+    .left(style='display:none')
       //-img(src="../images/NirvanaCube.png").menulogo
-      a.btn(onclick='openMenu("none")')
+      a.btn.btn-home(onclick='openMenu("none")')
         | Startside
         span.arrow ❯
       br
@@ -61,6 +61,24 @@ html
       br
       a.btn.btn-about(onclick='openMenu("#about")')
         | Om os
+        span.arrow ❯
+    .left2(style='display:none')
+      a.btn(onclick='openMenu("none")')
+        span.arrow ❯
+      br
+      a.btn.btn-aktiviteter(onclick='openMenu("#aktiviteter")')
+        span.arrow ❯
+      br
+      a.btn.btn-tilmelding(onclick='openMenu("#tilmelding")')
+        span.arrow ❯
+      br
+      a.btn.btn-kontakt(onclick='openMenu("#kontakt")')
+        span.arrow ❯
+      br
+      a.btn.btn-priser(onclick='openMenu("#priser")')
+        span.arrow ❯
+      br
+      a.btn.btn-about(onclick='openMenu("#about")')
         span.arrow ❯
   .info
     #aktiviteter.textfield(style="display:none")
@@ -255,3 +273,17 @@ html
     #about.textfield(style="display:none")
       h2 Foreningen Nørdenirvana
       p Text text text text
+.imageSlideshow(data-draggable="true")
+.logoBar(style="height:100px; width:100px")
+  img.logo(src="/images/empty.png")
+  a(href="https://www.youtube.com/channel/UCmionPbYL2BITCvN73q6FeA")
+    img.logo(src="/images/youtube.png")
+  a(href="https://www.facebook.com/noerdenirvana")
+    img.logo(src="/images/facebook.png" href="https://www.facebook.com/noerdenirvana")
+  a(href="https://twitter.com/Noerdenirvana")
+    img.logo(src="/images/twitter.png")
+img(src="https://www.dropbox.com/s/et69hw77or2qbvc/screen_0.png?raw=1", style="display:none;")
+img(src="https://www.dropbox.com/s/b48lbfts2sxwroa/screen_1.png?raw=1", style="display:none;")
+img(src="https://www.dropbox.com/s/xsyqh1t5ozza4rh/screen_2.png?raw=1", style="display:none;")
+img(src="https://www.dropbox.com/s/3fk5j9mib2nz2wh/screen_3.png?raw=1", style="display:none;")
+img(src="https://www.dropbox.com/s/vp47lw4m2keura5/aktiviteter.jpg?raw=1", style="display:none;")

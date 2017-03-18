@@ -32,6 +32,7 @@ h1 {
     margin: 20px;
     margin-top: 0px;
     padding-top:20px;
+    z-index:9001;
 }
 a {
   color: #00b7ff;
@@ -193,6 +194,13 @@ button::-moz-focus-inner {
   top:19vh;
   z-index:10;
 }
+.left2{
+  text-align: left;
+  margin-left: -25px;
+  position: absolute;
+  top:19vh;
+  z-index:10;
+}
 
 ::-webkit-input-placeholder {
    color: rgb(22,22,22);
@@ -240,12 +248,11 @@ table {
     font-size: 32px;
   }
   .textfield{
-    z-index: 200;
     font-size: 36px;
     padding-right: 10%
   }
-  .info{
-    z-index: 5;
+  .left2{
+    margin-left: -56px;
   }
 }
 
@@ -267,4 +274,49 @@ table {
  
 ::-webkit-scrollbar-corner {
       background-color: black;
+}
+
+.logoBar{
+    position:absolute;
+    bottom:5%;
+    right:3%;
+}
+
+.logo{
+    opacity:0.6;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    height: 50px;
+    width: 50px;
+}
+
+.logo:hover{
+    opacity:1.0;
+    transform: scale(1.2);
+}
+
+.imageSlideshow{ 
+    width: 30%;
+    height: 30%;
+    position: absolute;
+    top: 30%;
+    right: 8%;
+    opacity:0.7;
+    background-image:url('/images/screenshots/screen_0.png');
+    background-image:url('/images/screenshots/screen_1.png');
+    background-image:url('/images/screenshots/screen_2.png');
+    background-image:url('/images/screenshots/screen_3.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    -webkit-transition: background-image 0.2s ease-in-out;
+    transition: background-image 0.2s ease-in-out;
+    z-index:1;
+     box-shadow: 10px 10px 5px rgba(20, 19, 19, 0.88);
+}
+
+.imageSlideshow:hover{
+    opacity:1.0;
+        background-size: 110%;
 }
