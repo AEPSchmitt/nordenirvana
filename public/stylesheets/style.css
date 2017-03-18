@@ -257,6 +257,9 @@ table {
   .imageSlideshow{
       display:none;
   }
+  .logoBar{
+      transform:scale(2.0);
+  }
 }
 
 ::-webkit-scrollbar {
