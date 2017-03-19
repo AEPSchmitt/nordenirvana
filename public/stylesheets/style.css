@@ -26,6 +26,12 @@ body {
     src: url("Vonique92.otf");
 }
 
+
+a {
+  color: #00b7ff;
+  font-family: 'Oswald', sans-serif;
+}
+
 h1 {
     color:antiquewhite;
     font-family: vonique;
@@ -34,9 +40,6 @@ h1 {
     margin-top: 0px;
     padding-top:20px;
     z-index:9001;
-}
-a {
-  color: #00b7ff;
 }
 
 td {
@@ -135,7 +138,8 @@ select {
   background: white;
 }
 .pagetitle{
-  color: inherit;
+  color: antiquewhite;
+  font-family: vonique;
   text-decoration:none;
 }
 .btn:hover .arrow {
@@ -307,8 +311,8 @@ table {
     width: 30%;
     height: 30%;
     position: absolute;
-    top: 65%;
-    right: 11%;
+    top: 35%;
+    right: 3%;
     opacity:0.7;
     background-image:url('/images/screenshots/screen_0.png');
     background-image:url('/images/screenshots/screen_1.png');
@@ -328,7 +332,7 @@ table {
     justify-content: center; /* align horizontal */
     align-items: center; /* align vertical */
     color: antiquewhite;
-    font-family: vonique;
+    font-family: 'Oswald', sans-serif;
     font-size:50px;
     -webkit-text-stroke-width: 1px;
     -webkit-text-stroke-color: black;

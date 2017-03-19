@@ -3,6 +3,7 @@ html
   head
     title= title
     link(rel='stylesheet', href='/stylesheets/style.css')
+    link(href="https://fonts.googleapis.com/css?family=Oswald", rel="stylesheet")
     link(rel='stylesheet', href='/stylesheets/font-awesome-4.7.0/css/font-awesome.min.css')
     link(rel='stylesheet', href='/vendor/jquery/ui/jquery-ui.min.css')
     script(type='text/javascript' src='../vendor/jquery/jquery-3.1.1.min.js')
@@ -274,9 +275,9 @@ html
     #about.textfield(style="display:none")
       h2 Foreningen Nørdenirvana
       p Text text text text
-.imageSlideshow(data-draggable="true")
+.imageSlideshow(data-draggable="true", title="Drag me!", style="display:none;")
   p.closeSlideshow(onclick="closeSlideshow()") x
-  p.slideShowText
+  p.slideShowText(title="close slideshow")
 .logoBar(style="height:100px; width:100px")
   img.logo.slideshow-btn.inactive(src="/images/slideshow.png", onclick="openSlideshow()")
   a(href="https://www.youtube.com/channel/UCmionPbYL2BITCvN73q6FeA")
@@ -285,7 +286,7 @@ html
     img.logo(src="/images/facebook.png" href="https://www.facebook.com/noerdenirvana")
   a(href="https://twitter.com/Noerdenirvana")
     img.logo(src="/images/twitter.png")
-img(src="https://www.dropbox.com/s/et69hw77or2qbvc/screen_0.png?raw=1", style="display:none;")
+img(src="https://www.dropbox.com/s/et69hw77or2qbvc/screen_0.png?raw=1", style="display:none;", onload="openSlideshow()")
 img(src="https://www.dropbox.com/s/b48lbfts2sxwroa/screen_1.png?raw=1", style="display:none;")
 img(src="https://www.dropbox.com/s/xsyqh1t5ozza4rh/screen_2.png?raw=1", style="display:none;")
 img(src="https://www.dropbox.com/s/3fk5j9mib2nz2wh/screen_3.png?raw=1", style="display:none;")
