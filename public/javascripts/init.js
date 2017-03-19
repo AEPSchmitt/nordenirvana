@@ -11,20 +11,62 @@ $(document).ready(function () {
   $('.btn-aktiviteter').hover(function(){
     toggleSlideshow();
     $('.imageSlideshow').css("background-image", "url(https://www.dropbox.com/s/vp47lw4m2keura5/aktiviteter.jpg?raw=1)");
+    slideShowText("aktiviteter");
   }, function(){
     toggleSlideshow();
     $('.imageSlideshow').css("background-image", "url(https://www.dropbox.com/s/et69hw77or2qbvc/screen_0.png?raw=1)");
+    slideShowText("");
   });
   
   // Home hover
   $('.btn-home').hover(function(){
     toggleSlideshow();
-    $('.imageSlideshow').css("background-image", "url(../images/tree_background.png)");
+    $('.imageSlideshow').css({
+      "background-image" :"url(/images/NirvanaCube.png)",
+      "background-size" : "35%",
+      "box-shadow" : "none"});
+
+    slideShowText("home");
   }, function(){
     toggleSlideshow();
-    $('.imageSlideshow').css("background-image", "url(https://www.dropbox.com/s/et69hw77or2qbvc/screen_1.png?raw=1)");
+    $('.imageSlideshow').css({"background-image": "url(https://www.dropbox.com/s/et69hw77or2qbvc/screen_1.png?raw=1)",
+      "background-size" : "100%",
+      "box-shadow": "10px 10px 5px rgba(20, 19, 19, 0.88)"});
+    slideShowText("");
   })
 
+  // Tilmelding
+    $('.btn-tilmelding').hover(function(){
+      //toggleSlideshow();
+    //$('.imageSlideshow').css("background-image", "url(https://www.dropbox.com/s/vp47lw4m2keura5/aktiviteter.jpg?raw=1)");
+      slideShowText("tilmelding");
+    }, function(){
+    slideShowText("");
+  });
+  // Kontakt
+    $('.btn-kontakt').hover(function(){
+      //toggleSlideshow();
+    //$('.imageSlideshow').css("background-image", "url(https://www.dropbox.com/s/vp47lw4m2keura5/aktiviteter.jpg?raw=1)");
+      slideShowText("kontakt");
+    }, function(){
+    slideShowText("");
+  });
+  // Priser
+  $('.btn-priser').hover(function(){
+      //toggleSlideshow();
+    //$('.imageSlideshow').css("background-image", "url(https://www.dropbox.com/s/vp47lw4m2keura5/aktiviteter.jpg?raw=1)");
+      slideShowText("priser");
+    }, function(){
+    slideShowText("");
+  });
+    // Kontakt
+  $('.btn-about').hover(function(){
+      //toggleSlideshow();
+    //$('.imageSlideshow').css("background-image", "url(https://www.dropbox.com/s/vp47lw4m2keura5/aktiviteter.jpg?raw=1)");
+      slideShowText("om os");
+    }, function(){
+    slideShowText("");
+  });
 });
 
 $(".left2").hover(
@@ -142,4 +184,8 @@ function openSlideshow(){
   $('.imageSlideshow').show("medium");
   $('.slideshow-btn').removeClass("active");
   $('.slideshow-btn').addClass("inactive");
+}
+
+function slideShowText(text){
+  $('.slideShowText').text(text);
 }

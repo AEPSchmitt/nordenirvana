@@ -307,8 +307,8 @@ table {
     width: 30%;
     height: 30%;
     position: absolute;
-    top: 30%;
-    right: 8%;
+    top: 65%;
+    right: 11%;
     opacity:0.7;
     background-image:url('/images/screenshots/screen_0.png');
     background-image:url('/images/screenshots/screen_1.png');
@@ -317,15 +317,28 @@ table {
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center center;
-    -webkit-transition: background-image 0.2s ease-in-out;
-    transition: background-image 0.2s ease-in-out;
+    -webkit-transition: background-image 0.5s ease-in-out;
+    transition: background-image 0.5s ease-in-out;
     z-index:1;
      box-shadow: 10px 10px 5px rgba(20, 19, 19, 0.88);
+}
+
+.slideShowText{
+    display: flex;
+    justify-content: center; /* align horizontal */
+    align-items: center; /* align vertical */
+    color: antiquewhite;
+    font-family: vonique;
+    font-size:50px;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: black;
+    line-height: 180px;
 }
 
 .imageSlideshow:hover{
     opacity:1.0;
     background-size: 110%;
+    cursor:pointer;
 }
 
 .closeSlideshow{
@@ -334,6 +347,8 @@ table {
     cursor: pointer;
     top: -35px;
     font-family: cursive;
+    color:black;
+    font-size:14px;
     font-weight: bold;
 }
 
@@ -351,4 +366,14 @@ table {
 
 .active {
     opacity:0.8;
+}
+
+.island{
+    position: absolute;
+    top: 314px;
+    left: 859px;
+}
+
+.island:hover{
+    transform:scale(1.1);
 }
