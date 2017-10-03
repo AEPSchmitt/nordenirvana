@@ -17,7 +17,7 @@ $(document).ready(function () {
     $('.imageSlideshow').css("background-image", "url(https://www.dropbox.com/s/et69hw77or2qbvc/screen_0.png?raw=1)");
     slideShowText("");
   });
-  
+
   // Home hover
   $('.btn-home').hover(function(){
     toggleSlideshow();
@@ -39,7 +39,7 @@ $(document).ready(function () {
     $('.btn-tilmelding').hover(function(){
       //toggleSlideshow();
     //$('.imageSlideshow').css("background-image", "url(https://www.dropbox.com/s/vp47lw4m2keura5/aktiviteter.jpg?raw=1)");
-      slideShowText("tilmelding");
+      slideShowText("Tilmelding");
     }, function(){
     slideShowText("");
   });
@@ -81,7 +81,7 @@ $(".left2").hover(
   }
 )
 
-window.onbeforeunload = function () {   
+window.onbeforeunload = function () {
     $('.info').hide('medium')
 }
 
@@ -129,13 +129,13 @@ var screenshots = [
 ]
 
 $(document).ready(function() {
-        
+
         var $body = $('body');
         var $target = null;
         var isDraggEnabled = false;
 
         $body.on("mousedown", "div", function(e) {
-           
+
           $this = $(this);
             isDraggEnabled = $this.data("draggable");
 
@@ -152,22 +152,22 @@ $(document).ready(function() {
               $body.addClass('noselect');
               $target = $(e.target);
             };
-   
+
         });
-        
+
          $body.on("mouseup", function(e) {
             $target = null;
             $body.find(".draggable").removeClass('draggable');
             $body.removeClass('noselect');
         });
-        
+
          $body.on("mousemove", function(e) {
               if ($target) {
                   $target.offset({
                       top: e.pageY  - y,
                       left: e.pageX - x
                   });
-              };     
+              };
          });
 
     });
