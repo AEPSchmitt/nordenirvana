@@ -37,7 +37,7 @@ html
   img(src="/images/island_cutout2.png", style="display:none").island
   h1
     a.pagetitle(onclick='openMenu("none")')
-      | Nørdenirvana 
+      | Nørdenirvana
   .sidemenu
     .left(style='display:none')
       //-img(src="../images/NirvanaCube.png").menulogo
@@ -46,7 +46,7 @@ html
         span.arrow ❯
       br
       a.btn.btn-aktiviteter(onclick='openMenu("#aktiviteter")')
-        | Aktiviteter 
+        | Aktiviteter
         span.arrow ❯
       br
       a.btn.btn-tilmelding(onclick='openMenu("#tilmelding")')
@@ -90,7 +90,7 @@ html
       p Lokaliteter vil blive tilføjet når de er fastsat.
       p Der vil på alle hold være mulighed for at være med 2 gange gratis, for at se hvad vi egentlig går og laver.
       h2 Nørdenirvana Classic (Storenørd)
-      p 
+      p
         u Anbefalet alder: 12+
       p
         u Tidspunkt: Tirsdag, kl. 17-20.
@@ -121,94 +121,94 @@ html
           tr
             th(colspan='2') Tilmeldingsformular
           tr
-            td  Fornavn 
+            td  Fornavn
             td
               input(type='TEXT', size='25', maxlength='100', name='MemberFirstname', value='')
               br
           tr
-            td  Mellemnavn 
+            td  Mellemnavn
             td
               input(type='TEXT', size='25', maxlength='100', name='MemberMiddlename', value='')
               br
             td
           tr
-            td Efternavn 
+            td Efternavn
             td
               input(type='TEXT', size='25', maxlength='100', name='MemberLastname', value='')
               br
           tr
-            td  Adresse 
+            td  Adresse
             td
               input(type='TEXT', size='25', maxlength='100', name='MemberAdress', value='')
               br
             td
           tr
-            td  Post nr. 
+            td  Post nr.
             td
               input#FOAD_ZIP(type='TEXT', size='4', maxlength='4', name='MemberZip', value='', onkeyup='foadInputValidate();')
               span#FOAD_ZIP_HIGHLIGHT(style='font-size: 18px; color: #FF0000;')
               br
           tr
-            td  By 
+            td  By
             td
               input(type='TEXT', size='25', maxlength='100', name='MemberCity', value='')
               br
             td
           tr
-            td  E-mail 
+            td  E-mail
             td
               input#FOAD_EMAIL(type='TEXT', size='25', maxlength='100', name='MemberEmail', value='', onkeyup='foadInputValidate();')
               span#FOAD_EMAIL_HIGHLIGHT(style='font-size: 18px; color: #FF0000;')
               br
           tr
-            td Telefon 
+            td Telefon
             td
               input#FOAD_PHONE(type='TEXT', size='8', maxlength='8', name='MemberPhone', value='', onkeyup='foadInputValidate();')
               span#FOAD_PHONE_HIGHLIGHT(style='font-size: 18px; color: #FF0000;')
               br
           tr
-            td  Mobil 
+            td  Mobil
             td
               input#FOAD_MOBILE(type='TEXT', size='8', maxlength='8', name='MemberMobile', value='', onkeyup='foadInputValidate();')
               span#FOAD_MOBILE_HIGHLIGHT(style='font-size: 18px; color: #FF0000;')
               br
           tr
-            td  Fødselsdag 
+            td  Fødselsdag
             td
-              input#FOAD_BIRTH(type='TEXT', size='10', maxlength='10', name='MemberBirth', value='', onkeyup='foadInputValidate();' placeholder='(dd.mm.åååå)') 
+              input#FOAD_BIRTH(type='TEXT', size='10', maxlength='10', name='MemberBirth', value='', onkeyup='foadInputValidate();' placeholder='(dd.mm.åååå)')
               span#FOAD_BIRTH_HIGHLIGHT(style='font-size: 18px; color: #FF0000;')
               br
           tr
-            td  Køn 
+            td  Køn
             td
               select(name='MemberSex')
                 option(value='1') Mand
                 option(value='2') Kvinde
               br
           tr
-            td  Kommentar 
+            td  Kommentar
             td
               input(type='TEXT', size='25', maxlength='100', name='MemberComment', value='')
               br
           tr
-            td  Forældre/værge navn 
+            td  Forældre/værge navn
             td
               input(type='TEXT', size='25', maxlength='100', name='MemberExtra1', value='')
               br
           tr
-            td Deltager mail 
+            td Deltager mail
             td
               input#FOAD_EXTRA2(type='TEXT', size='25', maxlength='100', name='MemberExtra2', value='', onkeyup='foadInputValidate();')
               span#FOAD_EXTRA2_HIGHLIGHT(style='font-size: 18px; color: #FF0000;')
               br
           tr
-            td  Forældre/værge mobil 
+            td  Forældre/værge mobil
             td
               input#FOAD_EXTRA3(type='TEXT', size='8', maxlength='8', name='MemberExtra3', value='', onkeyup='foadInputValidate();')
               span#FOAD_EXTRA3_HIGHLIGHT(style='font-size: 18px; color: #FF0000;')
               br
           tr
-            td Ønsket hold: 
+            td Ønsket hold:
             td
               select(name='MemberExtra4')
                 option Minecraft 1
@@ -231,36 +231,36 @@ html
         input(type='HIDDEN', name='FOADELM', value='1:1:1:1:1:1:1:1:1:0:1:1:1:1:1:1:1:1:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:')
   .info
     #kontakt.textfield(style="display:none")
-      h2 
+      h2
         u Kontakt Bestyrelsen
       p Formand:
       p Majbrit Bogø
-      p 
+      p
         a(href='mailto:formand@noerdenirvana.dk') formand@noerdenirvana.dk
       br
       p Næstformand:
       p Rene Nørbjerg
-      p 
+      p
         a(href='mailto:naestformand@noerdenirvana.dk') naestformand@noerdenirvana.dk
-      br      
+      br
       p Kasserer:
       p Helene Elmgren
-      p 
+      p
         a(href='mailto:kasserer@noerdenirvana.dk') kasserer@noerdenirvana.dk
       br
       p Holdleder:
       p Emil Paltorp
-      p 
+      p
         a(href='mailto:holdleder@noerdenirvana.dk') holdleder@noerdenirvana.dk
       br
       p Holdassistent:
       p Benjamin Bakkelev
-      p 
+      p
         a(href='mailto:holdassistent@noerdenirvana.dk') holdassistent@noerdenirvana.dk
       br
       p Suppleant:
       p Gitte Bakkelev
-      p 
+      p
         a(href='mailto:suppleant@noerdenirvana.dk') suppleant@noerdenirvana.dk
   .info
     #priser.textfield(style="display:none")
@@ -270,11 +270,12 @@ html
       h4 Kontingent og indmeldelsesgebyr:
       p Medlemskontingent: kr. 900 pr. halvår
       p Indmeldelsesgebyr kr. 75
-      p Støttemedlemsskab og sponsorater: Har du lyst at støtte foreningen, kan der tegnes et støttemedlemsskab for kr. 500/år, eller kontakt os for andre støttemuligheder. 
+      p Støttemedlemsskab og sponsorater: Har du lyst at støtte foreningen, kan der tegnes et støttemedlemsskab for kr. 500/år, eller kontakt os for andre støttemuligheder.
   .info
     #about.textfield(style="display:none")
       h2 Foreningen Nørdenirvana
-      p Text text text text
+      p Nørdenirvana er en forening, med det formål at give unge mulighed for at gå til nørderier med deres yndlingsaktiviteter, såsom Minecraft, LEGO, Magic the Gathering, Pokémon, Hearthstone, Doctor Who, Comic Books o.l. sammen med andre unge med samme interesser.
+      p Lige som at man kan gå til fægtning, fodbold eller håndbold, giver vi mulighed for at gå til ‘Nørd’.
 .imageSlideshow(data-draggable="true", title="Drag me!", style="display:none;")
   p.closeSlideshow(onclick="closeSlideshow()") x
   p.slideShowText(title="close slideshow")
